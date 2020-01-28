@@ -1,0 +1,37 @@
+.todo__top {
+    background-image: linear-gradient(to right bottom, $color-green-primary, $color-green-secondary);
+    height: 120px;
+    border-radius: 10px 10px 0 0;
+    padding-top: 5px;
+}
+.todo__time {
+    width: 40px;
+    margin: 5px auto;
+    color: $color-white;
+    font-size: 20px;
+}
+.todo__input {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid $color-green-dark;
+    outline: none;
+    color: $color-green-dark;
+    font-size: 17px; 
+    padding: 3px 10px;
+    width: 250px;
+    margin: 5px auto;
+    display: inline-block;
+    position: relative;
+}
+.todo__add {
+    background-color: #7ed56f;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: $color-green-dark;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border: 1px solid $color-green-dark;
+}

@@ -1,0 +1,49 @@
+.todo__bottom {
+    background-image: linear-gradient(to left bottom, $color-green-primary, $color-green-secondary);
+    min-height: 300px;
+    border-radius: 0 0 10px 10px;
+}
+
+.active__list,
+.deactive__list {
+    list-style: none;
+    padding: 15px;
+}
+.active__item,
+.deactive__item {
+    font-size: 15px;
+    color: $color-white;
+    background-color: $color-green-dark;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-align: center;
+    
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.todo__deactive {
+    position: relative;
+    margin-top: -10px;
+    &::before {
+        content: '';
+        height: 5px;
+        width: 90%;
+        background-color: $color-green-dark;
+        position: absolute;
+        top: -5px;
+        left: 5%;
+        margin: 0 auto;
+    }
+}
+
+.checkbox {
+    float: left;
+    margin: 5px;
+}
+.delete {
+    padding: 5px 10px;
+    font-size: 10px;
+    margin: -2px 2px;
+}

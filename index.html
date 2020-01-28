@@ -8,12 +8,42 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-
-
+    <div class="container">
+        <div class="todo">
+            <div class="todo__top">
+                <div class="todo__time">
+                    <span class="time">19:41</span>
+                </div>
+                <div class="todo__insert">
+                    <form id="form">
+                        <input type="text" class="todo__input">
+                        <input type="submit" class="todo__add" value="+">
+                    </form>
+                </div>
+            </div>
+            <div class="todo__bottom">
+                <div class="todo__items">
+                    <div class="todo__active">
+                        <ul class="active__list">
+                            <li class="active__item"> <input type="checkbox" class="checkbox"> Finish Project <button class="btn btn-danger float-right delete">X</button></li>
+                            <li class="active__item"> <input type="checkbox" class="checkbox"> Finish Project 2 <button class="btn btn-danger float-right delete">X</button></li>
+                        </ul>
+                    </div>
+                    <div class="todo__deactive">
+                        <ul class="deactive__list">
+                            <li class="deactive__item"> <input type="checkbox" class="checkbox"> Task 1 <button class="btn btn-danger float-right delete">X</button></li>
+                            <li class="deactive__item"> <input type="checkbox" class="checkbox"> Task 2 <button class="btn btn-danger float-right delete">X</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -24,6 +54,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
