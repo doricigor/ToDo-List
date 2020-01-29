@@ -73,6 +73,9 @@ body {
   .deactive__item:not(:last-child) {
     margin-bottom: 10px; }
 
+.deactive__item {
+  opacity: .5; }
+
 .todo__deactive {
   position: relative;
   margin-top: -10px; }
@@ -86,7 +89,8 @@ body {
     left: 5%;
     margin: 0 auto; }
 
-.checkbox {
+.checkbox,
+.checkbox:checked {
   float: left;
   margin: 5px; }
 

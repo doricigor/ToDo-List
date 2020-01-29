@@ -1,13 +1,6 @@
 const form = document.querySelector('#form');
 const aList = document.querySelector('.active__list');
 const dList = document.querySelector('.deactive__list');
-const check = document.querySelectorAll('.checkbox');
-
-// const checkArr = Array.of(check);
-// checkArr.forEach(e => {
-//     e.addEventListener('click', checked);
-// });
-
 
 const today = new Date();
 const time = today.getHours() + ":" + today.getMinutes();
@@ -22,11 +15,10 @@ aList.addEventListener('click', removeItem);
 dList.addEventListener('click', removeItem);
 
 
-
 function addItem(e) {
     e.preventDefault();
     let input = document.querySelector('.todo__input').value;
-    
+
     if (input !== '') {
         let li = document.createElement('li');
         li.className = 'active__item';
@@ -35,7 +27,12 @@ function addItem(e) {
         const del = document.createElement('button');
         del.className = 'btn btn-danger float-right delete';
         del.innerText = 'x';
-        
+
+        const box = document.createElement('input');
+        box.className = 'checkbox';
+        box.setAttribute('type', 'checkbox');
+
+        li.appendChild(box);
         li.appendChild(del);
         aList.appendChild(li);
     } else {
@@ -53,30 +50,19 @@ function removeItem(e) {
         } else {
             dList.removeChild(item);
         }
-    } 
+    }
+    if ((e.target.classList.contains('checkbox'))) {
+        const done = e.target.parentElement;
+        if (done.classList.contains('active__item')) {
+            done.classList.remove('active__item');
+            done.className = 'deactive__item';
+            e.target.className = 'checkbox checked';
+            dList.appendChild(done);
+        } else {
+            done.classList.remove('deactive__item');
+            done.className = 'active__item';
+            e.target.className = 'checkbox unchecked';
+            aList.appendChild(done);
+        }
+    }
 }
-
-
-// function checked(e) {
-//     if (e.target.classList.contains('checkbox')) { 
-//         const checkItem = e.target.parentElement;
-//         if (checkItem.classList.contains('.active__item')) {
-//             checkItem.classList.remove('active__item');
-//             checkItem.className = 'deactive__item';
-//             dList.appendChild(checkItem);
-//         } 
-//         if (checkItem.classList.contains('.deactive__item')){
-//             checkItem.classList.remove('deactive__item');
-//             checkItem.className = 'active__item';
-//             aList.appendChild(checkItem);
-//         }
-//     }
-// }
-
-    // if (e.target.classList.contains('checkbox')) {
-    //     const checked = e.target.parentElement;
-    //     checked.classList.remove('active__item');
-    //     checked.className = 'deactive__item';
-    //     dList.appendChild(checked);
-    //     console.log(checked);
-    // } 

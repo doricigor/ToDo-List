@@ -9,6 +9,7 @@
     list-style: none;
     padding: 15px;
 }
+
 .active__item,
 .deactive__item {
     font-size: 15px;
@@ -17,15 +18,20 @@
     padding: 10px 5px;
     border-radius: 5px;
     text-align: center;
-    
+
     &:not(:last-child) {
         margin-bottom: 10px;
     }
 }
 
+.deactive__item {
+    opacity: .5;
+}
+
 .todo__deactive {
     position: relative;
     margin-top: -10px;
+
     &::before {
         content: '';
         height: 5px;
@@ -38,10 +44,12 @@
     }
 }
 
-.checkbox {
+.checkbox,
+.checkbox:checked {
     float: left;
     margin: 5px;
 }
+
 .delete {
     padding: 5px 10px;
     font-size: 10px;
